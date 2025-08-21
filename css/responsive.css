@@ -1,0 +1,18 @@
+@media (max-width:1112px) {
+
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-img img {
+    width: 100%;
+    max-width: 100%;         /* agora ocupa todo o espaço */
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0; /* arredonda só em cima */
+  }
+
+  .project-info {
+    padding: 1.5rem;
+  }
+}
