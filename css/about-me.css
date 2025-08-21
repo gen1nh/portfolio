@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
 
+/* Mantendo as variáveis, pois elas são usadas pelos estilos específicos abaixo */
 :root {
   /* FONTES */
   --font-primary: "Outfit", sans-serif;
@@ -24,61 +25,26 @@
   --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-  font-family: var(--font-primary);
-  font-weight: 500;
-}
-
-/* Container centralizado */
-.main-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 32px 24px;
-}
-
-/* SEÇÕES DE FUNDO */
-.section-black {
-  background-color: var(--color-black);
-  color: var(--color-white);
-  width: 100%;
-}
-
-.section-white {
-  background-color: var(--color-white);
-  color: var(--color-black);
-  width: 100%;
-}
-
-/* NAVIGATION */
-.navigation {
-  margin-bottom: 64px;
-}
-
-.nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 32px;
-  padding: 24px 0;
-  font-weight: 500;
-}
-
-.nav a {
-  font-family: var(--font-secondary);
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--color-white);
-  transition: 0.3s;
-}
-
-.nav a:hover {
-  color: var(--color-accent-2);
-}
+/* ============================================= */
+/* ESTILOS ESPECÍFICOS                  */
+/* ============================================= */
 
 /* HERO */
+.dark {
+  background-color: #141414;
+  display: flex;
+  margin-bottom: 60px;
+  color: white;
+}
+
+.navigation a{
+  color: white;
+}
+
+#home{
+  color: white;
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -88,11 +54,12 @@
 .content-hero {
   display: flex;
   align-items: center;
-  gap: 78px;
+  gap: 169px;
   font-size: 2rem;
-  text-align: start;
+  text-align: end;
 }
 
+/* Mantendo as cores, hovers e contornos específicos que você criou */
 .Geninho {
   background-color: var(--color-accent-2);
 }
@@ -100,24 +67,40 @@
 .Geninho:hover {
   color: var(--color-black);
   background-color: var(--color-white);
-  text-shadow: -1px -1px 0 var(--color-black),
-               1px -1px 0 var(--color-black),
-               -1px 1px 0 var(--color-black),
-               1px 1px 0 var(--color-black);
+  text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black),
+    -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black);
 }
 
 .text-outline-fill {
   color: var(--color-white);
-  text-shadow: -1px -1px 0 var(--color-black),
-               1px -1px 0 var(--color-black),
-               -1px 1px 0 var(--color-black),
-               1px 1px 0 var(--color-black);
+  text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black),
+    -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black);
 }
 
-#text-1:hover { color: var(--color-black); background-color: var(--color-accent-1); text-shadow: none; }
-#text-2:hover { color: var(--color-black); background-color: var(--color-accent-2); text-shadow: none; }
-#text-3:hover { color: var(--color-black); background-color: var(--color-accent-3); text-shadow: none; }
-#text-4:hover { color: var(--color-black); background-color: var(--color-accent-4); text-shadow: none; }
+#text-1:hover {
+  color: var(--color-black);
+  background-color: var(--color-accent-1);
+  text-shadow: none;
+}
+#text-2:hover {
+  color: var(--color-black);
+  background-color: var(--color-accent-2);
+  text-shadow: none;
+}
+#text-3:hover {
+  color: var(--color-black);
+  background-color: var(--color-accent-3);
+  text-shadow: none;
+}
+#text-4:hover {
+  color: var(--color-black);
+  background-color: var(--color-accent-4);
+  text-shadow: none;
+}
+
+/* ============================================= */
+/* SEÇÕES NOVAS                         */
+/* ============================================= */
 
 /* EXPERIENCE SECTION */
 .experience-section {
@@ -127,13 +110,12 @@
 
 .experience-content {
   display: flex;
-  justify-content: space-between;
-  gap: 64px;
+  gap: 640px;
   align-items: flex-start;
   flex-wrap: wrap; /* permite quebrar no mobile */
 }
 
-/* BLOCO EXPERIENCE / CERTIFICATES */
+/* [ Restante das regras da .experience-section ... ] */
 .experience-block,
 .certificates-block {
   flex: 1;
@@ -142,7 +124,6 @@
   flex-direction: column;
 }
 
-/* Cabeçalhos */
 .experience-header h1,
 .certificates-header h1 {
   font-size: 2rem;
@@ -155,7 +136,6 @@
   color: #555;
 }
 
-/* Conteúdo das listas */
 .history-content {
   display: flex;
   gap: 16px;
@@ -184,7 +164,6 @@
   margin-bottom: 0.5rem;
 }
 
-/* Botão expandir descrição */
 .experience-desc {
   display: none;
   margin-bottom: 0.5rem;
