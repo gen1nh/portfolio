@@ -36,7 +36,6 @@ html {
   gap: 24px;
   display: flex;
   justify-content: flex-end;
-  padding: 24px;
   font-weight: 500;
   font-size: 24px;
   color: #141414;
@@ -66,10 +65,9 @@ html {
 .nav a {
   font-family: var(--font-secondary);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #222222;
 }
-
 .hero {
   display: block;
   text-align: center;

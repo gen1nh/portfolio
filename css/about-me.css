@@ -31,7 +31,7 @@
 
 /* HERO */
 .dark {
-  background-color: #141414;
+  background-color: var(--color-black);
   display: flex;
   margin-bottom: 60px;
   color: white;
@@ -53,22 +53,24 @@
 
 .content-hero {
   display: flex;
+  width: 100%;
+  gap: 72px;
   align-items: center;
-  gap: 169px;
   font-size: 2rem;
   text-align: end;
 }
 
 /* Mantendo as cores, hovers e contornos específicos que você criou */
-.Geninho {
+.Geninho-dark {
   background-color: var(--color-accent-2);
 }
 
-.Geninho:hover {
+.Geninho-dark:hover {
+  border: none;
   color: var(--color-black);
   background-color: var(--color-white);
-  text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black),
-    -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black);
+  text-shadow: 1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black),
+    1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black);
 }
 
 .text-outline-fill {
@@ -150,7 +152,10 @@
 }
 
 .experience-item-content {
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  gap: 24px;
 }
 
 .experience-info h2 {
