@@ -2,23 +2,24 @@
 /* SEÇÕES NOVAS                         */
 /* ============================================= */
 
+
+.content-hero {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
 /* EXPERIENCE SECTION */
 .experience-section {
   font-family: var(--font-secondary);
   padding: 2rem 0;
 }
 
-.experience-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap; /* permite quebrar no mobile */
-}
-
 /* [ Restante das regras da .experience-section ... ] */
 .experience-block,
 .certificates-block {
-  min-width: 280px;
+  max-width: 348px;
   display: flex;
   flex-direction: column;
 }
@@ -103,4 +104,74 @@
 
 .employment-history-certificates {
     padding-bottom: 32px;
+}
+
+.teste1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+.experience-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 180px;
+}
+
+/* ============================================= */
+/* CSS PARA O HERO E HOVER DA IMAGEM             */
+/* ============================================= */
+
+.content-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Adicione um gap para dar espaço entre a imagem e o texto */
+  gap: 40px; 
+}
+
+/* ESSE É O BLOCO PRINCIPAL PARA CORRIGIR */
+.container-imagem {
+  /* 1. Ponto de referência para as imagens internas */
+  position: relative; 
+  
+  /* 2. Tamanho explícito para o contêiner */
+  width: 300px;  /* << AJUSTE para a largura da sua imagem */
+  height: 300px; /* << AJUSTE para a altura da sua imagem */
+
+  /* Opcional: Deixa a imagem redonda, comum em perfis */
+  border-radius: 50%;
+  overflow: hidden; /* Garante que a imagem não "vaze" das bordas redondas */
+
+  /* Garante que o container não encolha */
+  flex-shrink: 0; 
+}
+
+/* Ajuste para as imagens se encaixarem perfeitamente no contêiner */
+.container-imagem img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cobrir a área sem distorcer */
+  
+  /* 3. Adiciona uma transição suave para o efeito */
+  transition: opacity 0.25s ease-in-out;
+}
+
+/* Por padrão, a imagem de hover fica invisível */
+.container-imagem .imagem-hover {
+  opacity: 0;
+}
+
+/* Quando passamos o mouse sobre o contêiner... */
+.container-imagem:hover .imagem-hover {
+  /* ...a imagem de hover se torna visível */
+  opacity: 1;
+}
+
+/* Opcional: esconde a imagem original no hover */
+.container-imagem:hover .imagem-original {
+  opacity: 0;
 }

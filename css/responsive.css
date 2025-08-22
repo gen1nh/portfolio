@@ -16,3 +16,12 @@
     padding: 1.5rem;
   }
 }
+
+@media (max-width:820px) {
+  .content-hero {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+}
