@@ -1,0 +1,106 @@
+/* ============================================= */
+/* SEÇÕES NOVAS                         */
+/* ============================================= */
+
+/* EXPERIENCE SECTION */
+.experience-section {
+  font-family: var(--font-secondary);
+  padding: 2rem 0;
+}
+
+.experience-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap; /* permite quebrar no mobile */
+}
+
+/* [ Restante das regras da .experience-section ... ] */
+.experience-block,
+.certificates-block {
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-header h1,
+.certificates-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.experience-header p,
+.certificates-header p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.history-content {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.experience-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.experience-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1;
+}
+
+.experience-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.experience-period {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.experience-desc {
+  display: none;
+  margin-bottom: 0.5rem;
+}
+
+.experience-desc.expanded {
+  width: 100%;
+  max-width: 240px;
+  display: block;
+}
+
+.experience-desc.collapsed {
+  display: none;
+}
+.toggle-desc {
+  background: none;
+  border: none;
+  color: #690099;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+/* Aplica o layout de grid ao container dos seus certificados */
+.employment-history {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px; /* Espaçamento entre os cards */
+}
+
+/* Move o card com a classe .card5 para o início */
+.card-destaque {
+  order: -1;
+}
+
+.employment-history-certificates {
+    padding-bottom: 32px;
+}

@@ -36,7 +36,7 @@ html {
   gap: 24px;
   display: flex;
   justify-content: flex-end;
-  padding: 24px;
+  padding: 24px 0px;
   font-weight: 500;
   font-size: 24px;
   color: #141414;

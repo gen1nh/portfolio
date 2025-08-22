@@ -54,7 +54,7 @@
 .content-hero {
   display: flex;
   align-items: center;
-  gap: 169px;
+  justify-content: space-between;
   font-size: 2rem;
   text-align: end;
 }
