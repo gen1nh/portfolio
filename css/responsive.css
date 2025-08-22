@@ -1,128 +1,130 @@
 /* responsive.css */
 
 @media (max-width: 1112px) {
-    .project-card {
-        flex-direction: column;
-    }
+  .project-card {
+    flex-direction: column;
+  }
 
-    .project-img img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 12px 12px 0 0;
-    }
+  .project-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+  }
 
-    .project-info {
-        padding: 1.5rem;
-    }
+  .project-info {
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 820px) {
+  .hero {
+    margin-top: 230px;
+  }
+
+  .h-about {
+    margin-top: 120px;
+  }
+
+  .content-hero {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Esconde os links do menu desktop */
+  .link {
+    display: none;
+  }
+
+  /* --- ÍCONE HAMBÚRGUER --- */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: fixed; /* Posição fixa na tela */
+    top: 56px;
+    right: 24px;
+    z-index: 1001; /* Garante que fique na frente de tudo */
+    background-color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+  }
+
+  .hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Animação para o "X" */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* --- BARRA LATERAL (SIDEBAR) --- */
+  /* Sidebar vindo da direita */
+.sidebar {
+  position: fixed;      /* fica sobreposta */
+  top: 0;
+  right: -250px;        /* escondida fora da tela */
+  width: 250px;
+  height: 100%;         /* ocupa toda a altura */
+  background: #f8f8f8;  /* ou o verde do print */
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 999;         /* garante que fica acima do conteúdo */
+}
+
+.sidebar.active {
+  right: 0;             /* aparece */
+}
 
 
-    .hero {
-      margin-top: 230px;
-    }
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens */
+    gap: 20px;
+  }
 
-        .h-about {
-      margin-top: 120px;
-    }
+  .sidebar ul li a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #333; /* Cor do texto mais escura para contraste */
+    display: block;
+    transition: 0.3s;
+  }
 
-    .content-hero {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-    /* Esconde os links do menu desktop */
-    .link {
-        display: none;
-    }
-
-    /* --- ÍCONE HAMBÚRGUER --- */
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        background: none;
-        border: none;
-        position: fixed; /* Posição fixa na tela */
-        top: 56px;
-        right: 24px;
-        z-index: 1001; /* Garante que fique na frente de tudo */
-    }
-
-    .hamburger .bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        background-color: #333;
-        transition: all 0.3s ease-in-out;
-    }
-
-    /* Animação para o "X" */
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    /* --- BARRA LATERAL (SIDEBAR) --- */
-    .sidebar {
-        height: 100%;
-        width: 250px;
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        left: -250px; /* Esconde o menu para fora da tela */
-        background-color: #f8f8f8; /* Cor de fundo mais suave */
-        overflow-x: hidden;
-        transition: left 0.3s ease-in-out; /* Transição mais rápida */
-        padding-top: 100px; /* Mais espaço no topo */
-        box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra suave */
-    }
-
-    .sidebar.active {
-        left: 0; /* Mostra o menu */
-    }
-
-    .sidebar ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centraliza os itens */
-        gap: 20px;
-    }
-
-    .sidebar ul li a {
-        padding: 15px 20px;
-        text-decoration: none;
-        font-size: 22px;
-        color: #333; /* Cor do texto mais escura para contraste */
-        display: block;
-        transition: 0.3s;
-    }
-
-    .sidebar ul li a:hover {
-        color: #007bff; /* Cor de destaque no hover */
-    }
+  .sidebar ul li a:hover {
+    color: var(--color-highlight)
+  }
 }
 
 @media (max-width: 480px) {
-    .content-hero h1 {
-        font-size: 3.4rem;
-    }
+  .content-hero h1 {
+    font-size: 3.4rem;
+  }
 
-    .text-hero p {
-        text-align: center;
-    }
+  .text-hero p {
+    text-align: center;
+  }
 }

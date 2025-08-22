@@ -1,10 +1,10 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const hamburger = document.querySelector('.hamburger');
     const sidebar = document.querySelector('.sidebar');
 
-    hamburgerMenu.addEventListener('click', () => {
-        hamburgerMenu.classList.toggle('active');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
         sidebar.classList.toggle('active');
     });
 });
