@@ -31,7 +31,7 @@
 
 /* HERO */
 .dark {
-  background-color: #141414;
+  background-color: var(--color-black);
   display: flex;
   margin-bottom: 60px;
   color: white;
@@ -53,22 +53,28 @@
 
 .content-hero {
   display: flex;
+  width: 100%;
+  gap: 72px;
   align-items: center;
+<<<<<<< HEAD
   justify-content: space-between;
+=======
+>>>>>>> cb93582aa8ebaa58cd13ce4c2b9c3748529c3c59
   font-size: 2rem;
   text-align: end;
 }
 
 /* Mantendo as cores, hovers e contornos específicos que você criou */
-.Geninho {
+.Geninho-dark {
   background-color: var(--color-accent-2);
 }
 
-.Geninho:hover {
+.Geninho-dark:hover {
+  border: none;
   color: var(--color-black);
   background-color: var(--color-white);
-  text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black),
-    -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black);
+  text-shadow: 1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black),
+    1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black);
 }
 
 .text-outline-fill {
@@ -150,7 +156,10 @@
 }
 
 .experience-item-content {
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  gap: 24px;
 }
 
 .experience-info h2 {
@@ -186,9 +195,22 @@
 }
 
 /* RESPONSIVO */
-@media (max-width: 900px) {
+
+@media (max-width: 1248px) {
+
   .experience-content {
-    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+
+  .content-hero{
+    text-align: center;
+  }
+
+  .experience-content {
     gap: 48px;
   }
 }

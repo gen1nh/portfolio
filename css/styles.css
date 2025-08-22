@@ -66,10 +66,9 @@ html {
 .nav a {
   font-family: var(--font-secondary);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #222222;
 }
-
 .hero {
   display: block;
   text-align: center;
