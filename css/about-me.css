@@ -191,9 +191,22 @@
 }
 
 /* RESPONSIVO */
-@media (max-width: 900px) {
+
+@media (max-width: 1248px) {
+
   .experience-content {
-    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+
+  .content-hero{
+    text-align: center;
+  }
+
+  .experience-content {
     gap: 48px;
   }
 }
