@@ -14,6 +14,10 @@
   font-weight: 500;
 }
 
+.hamburger {
+  display: none;
+}
+
 /* Removido o margin fixo do html para permitir o controle pelo wrapper */
 html {
   margin: 0;
@@ -39,7 +43,6 @@ html {
   padding: 24px 0px;
   font-weight: 500;
   font-size: 24px;
-  color: #141414;
 }
 
 #home {
@@ -68,7 +71,7 @@ html {
   font-size: 18px;
   font-weight: 500;
   color: #222222;
-}
+}   
 .hero {
   display: block;
   text-align: center;

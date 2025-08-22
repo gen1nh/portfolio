@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/about2.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="js/script.js">
   </head>
 
   <body>
     <div class="main-wrapper">
       <nav class="navigation">
-        <ul class="nav">
-          <li><a href="index.html" id="home">Home</a></li>
-          <li><a href="#" id="projects">Projects</a></li>
-          <li><a href="about2.html" id="about-me">About me</a></li>
-        </ul>
+            <ul class="nav" id="navLinks">
+                <li><a class="link" href="index.html">Home</a></li>
+                <li><a class="link" href="#">Projects</a></li>
+                <li><a class="link" href="about2.html">About me</a></li>
+                <button class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            </ul>
       </nav>
 
-      <div class="hero">
+      <div class="hero h-about">
         <div class="content-hero border-tracejada">
           <div class="container-imagem">
             <img
@@ -280,6 +286,7 @@
           }
         });
       });
+      
     </script>
 
     <footer class="footer">

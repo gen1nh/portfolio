@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="js/script.js">
   </head>
 
   <body>
     <div class="main-wrapper">
-      <nav class="navigation">
-        <ul class="nav">
-          <li><a href="index.html" id="home">Home</a></li>
-          <li><a href="#" id="projects">Projects</a></li>
-          <li><a href="about2.html" id="about-me">About me</a></li>
+      <nav class="navigation sidebar">
+        <ul class="nav" id="navLinks">
+          <li><a class="link" href="index.html">Home</a></li>
+          <li><a class="link" href="#">Projects</a></li>
+          <li><a class="link" href="about2.html">About me</a></li>
+          <button class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
         </ul>
       </nav>
       <div class="hero">
@@ -98,10 +104,15 @@
           </div>
         </div>
       </section>
+
       <footer class="footer">
         <ul class="content-footer">
           <li>
-            <a href="https://www.instagram.com/gen1nh/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/gen1nh/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 class="icons-footer"
                 src="assets/Platform=Instagram, Color=Original.svg"
@@ -110,7 +121,11 @@
             </a>
           </li>
           <li>
-            <a href="https://github.com/gen1nh" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/gen1nh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 class="icons-footer"
                 src="assets/Platform=Github, Color=Original.svg"
@@ -119,7 +134,11 @@
             </a>
           </li>
           <li>
-            <a href="https://br.linkedin.com/in/gen1nh" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://br.linkedin.com/in/gen1nh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 class="icons-footer"
                 src="assets/Platform=LinkedIn, Color=Original.svg"
